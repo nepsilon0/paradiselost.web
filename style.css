@@ -5,7 +5,7 @@
 	font-style: normal; 
 }
 
-body {
+html, body {
 	color: white;
 	background-image: url('backgroundmain.gif');
 	background-image: no-repeat;
@@ -17,7 +17,9 @@ body {
    -moz-osx-font-smoothing: grayscale;
    font-smooth: never;
    text-rendering: optimizeSpeed; 
-	
+	margin: 0; 
+	padding: 0; 
+	min-height: 100vh;
 	
 }
 
@@ -29,7 +31,7 @@ body {
 .landing {
 	display: flex; 
 	justify-content: center;
-	gap: 20px;
+	gap: 30px;
 	font-size: 48px
 	text-color: white;
 	
@@ -64,5 +66,19 @@ h2 {
 .infomation {
 	margin-top: 100px;
 	font-size: 25px;
+}
+
+.news {
+	width: 450px;
+	height: 500px;
+	border: 4px solid white; 
+	padding: 20px;
+	
+}
+
+
+
+.enter {
+	margin-left: 260px;
 }
 
