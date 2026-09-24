@@ -19,16 +19,70 @@
 	<hr>
 	<div style="align-items: center; margin-bottom: -20px"> <audio src="AUDIO_STORY.mp3" controls> </div>
 	<div class="infomation" style="margin-top: -20px;"> <img src="friend.gif" width="250"; height="170"; style="float: left; margin: 10px;" alt="{WELCOME..!!}">
-	<div> <iframe 
-    src="lord_english.html" 
-    width="100%" 
-    height="500px" 
-    style="border: none; border-radius: 8px; overflow: hidden;"
-    title="Lord English Text Generator">
-</iframe>
-	</div>
-		<p>This website conatins infomation about all content realated to the 	DELTARUNE inspired TTRPG: Paradise lost <br> If you want to join the adventure yourself, click on the SAVE file below and you will be taken to the LATEST campaign, if you want to see past (archived) campaigns or see splinter campaigns made by participants, click the CAMPAIGNS TAB. <br> </p> <a href="https://discord.gg/RdZutR8yH"> <img src="enter.jpeg"; class="enter"; alt="{{ENTER THE GAME!! DO IT!!}}"> </a>
-	</div> 
+		
+
+<h2 class="lord-english-text">WARNING: SINCE WDG HAS ENDED THE CAMPAIGNS THERE IS UNFORTUNATELY AN INDEFINITE PAUSE ON THIS PROJECT FOR THE TIME BEING. WHEN (OR IF) THE CAMPAIGN RETURNS THIS SITE WILL FUNCTION AS A SORT OF ARCHIVE FOR ALL THE PAST ADVENTURES HOPEFULLY.</h2>
+
+<style>
+    .lord-english-text {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 2.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        line-height: 1.5;
+        background: #000; /* Keeps a dark background so colors pop */
+        padding: 20px;
+        text-align: center;
+    }
+    .le-char {
+        display: inline-block;
+    }
+    .le-space {
+        display: inline-block;
+        width: 15px; /* Adjusts space width between words */
+    }
+    @keyframes le-flash {
+        0%   { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
+        16%  { color: #ffaa00; text-shadow: 0 0 8px #ffaa00; }
+        33%  { color: #ffff00; text-shadow: 0 0 8px #ffff00; }
+        50%  { color: #00ff00; text-shadow: 0 0 8px #00ff00; }
+        66%  { color: #0000ff; text-shadow: 0 0 8px #0000ff; }
+        83%  { color: #aa00ff; text-shadow: 0 0 8px #aa00ff; }
+        100% { color: #ff0000; text-shadow: 0 0 8px #ff0000; }
+    }
+</style>
+
+
+<script>
+    document.querySelectorAll('.lord-english-text').forEach(element => {
+        const text = element.textContent.trim().toUpperCase();
+        element.innerHTML = ''; 
+        
+        for (let i = 0; i < text.length; i++) {
+            const char = text[i];
+            const span = document.createElement('span');
+            
+            if (char === ' ') {
+                span.className = 'le-space';
+                span.innerHTML = '&nbsp;';
+            } else {
+                span.className = 'le-char';
+                span.innerText = char;
+                
+               
+                const randomDuration = (Math.random() * 0.2 + 0.15).toFixed(3);
+                const randomDelay = (Math.random() * 0.3).toFixed(3);
+                
+                span.style.animation = `le-flash ${randomDuration}s infinite linear`;
+                span.style.animationDelay = `-${randomDelay}s`;
+            }
+            element.appendChild(span);
+        }
+    });
+</script>
+
+
 	
 	<details style="margin-left: 250px; color: white;"> <summary style="font-size: 25px;"> PARADISE LOST: Chapter 1 Recap (Credit to WDG)</summary> <p>CHAPTER ONE - “UNCHARTED DEPTHS”
 After the PRELIMINARY TESTING, a glitch of an unknown cause swapped Gaster with a different variant of himself, simply called “ASTER”
