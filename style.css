@@ -78,7 +78,15 @@ h2 {
 	
 }
 
-
+.newslarge {
+	width: 450px;
+	height: 1000px;
+	border: 5px solid white; 
+	padding: 20px;
+	background-color: black;
+	border-spacing: 20px;
+	
+}
 
 .enter {
 	margin-left: 260px;
